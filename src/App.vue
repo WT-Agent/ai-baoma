@@ -345,7 +345,7 @@ const metricsList = [
   { key: 'anxietyReduction', label: '焦虑减缓度 (Reduction)' }
 ];
 
-const aiScores = ref<{ growthFeasibility: number; timeEfficiency: number; selfCareValue: number; familyHarmony: number; anxietyReduction: number; } | null>(null);
+const aiScores = ref<Record<string, number> | null>(null);
 
 const styleOptions = [
   { label: '宝妈副业与变现探索流 (远程办公/小红书博主/跨境电商/内容剪辑)', value: '宝妈副业与变现探索流' },
@@ -363,7 +363,7 @@ interface HistoryItem {
   destination: string;
   input: string;
   styleLabel: string;
-  aiScores: { growthFeasibility: number; timeEfficiency: number; selfCareValue: number; familyHarmony: number; anxietyReduction: number; } | null;
+  aiScores: Record<string, number> | null;
   output: string;
 }
 
